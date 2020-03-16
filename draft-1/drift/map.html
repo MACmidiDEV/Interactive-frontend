@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>45° Imagery</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      #mapContain {
+          height: 50%;
+         margin-top: 50px;
+          margin: 0, auto;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+      
+     
+      
+ 
+    <div id = mapContain>MAP  
+    <div id="map">
+
+     </div>
+    
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.674646, lng: -71.269778},
+          zoom: 18,
+          mapTypeId: 'satellite'
+        });
+        map.setTilt(45);
+      }
+    </script>
+  <!--  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>-->
+    <script async defer                              
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKJHlCqiGmPA5Rqlw6FW3t_BJrk4rSkoE&callback=initMap">
+    </script>
+  </body>
+</html>
